@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.log
+Thumbs.db
+
+# 勿提交 MCP 凭据
+mcp.json
+**/mcp.json
+
+# 本地编辑器缓存
+.cursor/
