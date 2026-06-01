@@ -8,7 +8,7 @@ alwaysApply: true
 你是 **调度官**，不是默认直接写代码。用户**每条消息**在给出实质回复或改文件之前，必须先完成 **§1 自检** 与 **§2 技能加载**（用 **Read** 打开对应 `SKILL.md`；Cursor 无 Skill 工具时以 Read 为准）。
 
 **权威全文**：[`安防-全局指挥/docs/agent/agent-skills-routing.md`](F:/C/git/安防开发总仓/安防-全局指挥/docs/agent/agent-skills-routing.md)  
-**总策略**：[`安防-全局指挥/docs/CURSOR-TOTAL-GUIDE.md`](F:/C/git/安防开发总仓/安防-全局指挥/docs/CURSOR-TOTAL-GUIDE.md)  
+**理性综合 · 防幻觉**：[`F:\C\git\RATIONAL-AGENT.md`](F:/C/git/RATIONAL-AGENT.md)  
 **人读入口**：[`安防-全局指挥/AGENT-COMMANDER.md`](F:/C/git/安防开发总仓/安防-全局指挥/AGENT-COMMANDER.md)
 
 技能磁盘路径（优先顺序）：
@@ -20,13 +20,20 @@ alwaysApply: true
 
 ---
 
-## §1 每轮自检（未完成不得动手）
+## §1 每轮自检（未完成不得动手 · 文档预算 ≤4）
 
-1. **Read** `superpowers/skills/using-superpowers/SKILL.md`（或用户目录下同路径）。
-2. **Read** [`agent-skills-routing.md`](F:/C/git/安防开发总仓/安防-全局指挥/docs/agent/agent-skills-routing.md) 的 **§0 总指挥** 与 **§1 速记**（至少扫表）。
-3. **归类用户意图**（可多选）：`plan` | `go` | `goon` | `fix` | n8n 运维 | 安防总项目 | 公众号 GZ | Obsidian | Playwright | GitHub | 其他。
-4. **按 §2 加载** 所列 `SKILL.md`（真的 Read，不要只写在回复里）。
-5. 若将改 n8n / 声称修复完成：再 Read `verification-before-completion`；`fix` / 报错再 Read `systematic-debugging`。
+**同一会话内**：步骤 1～2 已完成则后续轮次可跳过；步骤 3～4 每轮仍做。
+
+1. **Read** `superpowers/skills/using-superpowers/SKILL.md`（会话首次）。
+2. **Read** [`RATIONAL-AGENT.md`](F:/C/git/RATIONAL-AGENT.md) **§1～§3**（会话首次）。
+3. **Read** 当前工作区子仓 `CLAUDE.md` 的 **红线 + 运行环境 + 触发词**（及 `Agent 入口` 短链）；**不**复读已删的长表。
+4. **按 intent 增量 1～2 份**（计入预算）：
+   - `plan` / `go` / `goon` / `fix` → **扫** [`agent-skills-routing.md`](F:/C/git/安防开发总仓/安防-全局指挥/docs/agent/agent-skills-routing.md) **§1 对应行**，**Read 仅 1 个**所列 SKILL（plan 链首项；fix → `systematic-debugging`；go → `executing-plans`）。
+   - 领域 skills → 按需 Read [`domain-skills-thinking.md`](F:/C/git/安防开发总仓/安防-全局指挥/docs/agent/domain-skills-thinking.md) **§2 对应一行**；缺失跑 `F:\C\git\scripts\ensure-skill.ps1`。
+   - n8n 任务 → +1 份 `n8n-mcp-workflow-guide` 或对应 playbook（**不**与 §1 SKILL 重复计为第 5 份时，优先 guide）。
+   - 声称完成 / 修完 → +Read `verification-before-completion`（可替代本轮增量 SKILL 之一）。
+
+**归类意图**（心里或一句）：`plan` | `go` | `goon` | `fix` | n8n | Hermes | 其他。
 
 子 agent / 后台任务可跳过本规则（见 `using-superpowers` 的 SUBAGENT-STOP）。
 
@@ -80,6 +87,5 @@ alwaysApply: true
 
 ## §4 与旧规则关系
 
-- 本文件 = **总指挥**（每轮调度）。
-- [`00-agent-skills-routing.mdc`](00-agent-skills-routing.mdc) = 速记摘要（可保留，以本文件为准）。
+- 本文件 = **总指挥**（每轮调度）；细则见 `agent-skills-routing.md`。
 - 不得跳过 §1 直接改代码，除非用户明确「只回答一句话、不要读技能」且无任何 n8n/修复/规划意图。

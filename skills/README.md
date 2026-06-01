@@ -14,7 +14,7 @@
 
 ## 路由与速记
 
-见 `F:\C\git\安防开发总仓\安防-n8n运维\docs\n8n-global\agent-skills-routing.md` 与 `F:\C\git\.cursor\rules\00-agent-skills-routing.mdc`。
+见 [`安防-全局指挥/docs/agent/agent-skills-routing.md`](../../安防-全局指挥/docs/agent/agent-skills-routing.md) 与 [`F:\C\git\.cursor\rules\00-agent-commander.mdc`](../../.cursor/rules/00-agent-commander.mdc)。
 
 ## 更新 Superpowers
 

@@ -1,7 +1,14 @@
 # 安防 Cursor 技能树（云端备份）
 
-将 **`F:\C\git\.cursor\skills`** 与全局 **`rules/*.mdc`** 纳入 Git，便于换机、重装 Cursor 后一键恢复 Agent 技能与总指挥规则。
+将 **`F:\C\git\.cursor\skills`** 与全局 **`rules/*.mdc`** 纳入 Git，便于换机恢复。
 
+## Agent 入口（短链）
+
+- [`RATIONAL-AGENT.md`](../../RATIONAL-AGENT.md)
+- 本域 skills：[`domain-skills-thinking.md`](../安防-全局指挥/docs/agent/domain-skills-thinking.md) §2.8
+- 同步流程：[SYNC.md](SYNC.md)
+
+---
 | 项 | 值 |
 |----|-----|
 | GitHub | https://github.com/van7171/anfang-cursor-skills |
@@ -13,7 +20,7 @@
 | 路径 | 说明 |
 |------|------|
 | `skills/` | 技能主副本（与 `F:\C\git\.cursor\skills` 对齐） |
-| `rules/` | 全局 `alwaysApply` 规则指针（`00-agent-commander.mdc` 等） |
+| `rules/` | 全局 `alwaysApply` 规则镜像（`00-agent-commander.mdc`） |
 | `skills/superpowers/` | 上游 [obra/superpowers](https://github.com/obra/superpowers)（快照提交；可改子模块，见 `skills/UPSTREAM-SUBMODULES.md`） |
 | `skills/obsidian-skills/` | 上游 [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)（同上） |
 
