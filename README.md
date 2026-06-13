@@ -54,9 +54,9 @@ robocopy ".\skills" "F:\C\git\.cursor\skills" /MIR /XD .git
 Copy-Item -Force ".\rules\*.mdc" "F:\C\git\.cursor\rules\"
 ```
 
-## 与四仓关系
+## 与七子仓关系
 
-本仓为 **第五仓**（仅技能与全局规则），与 [安防开发总仓](../README.md) 下 n8n / 专利 / 官网 / 全局指挥 **独立提交、独立推送**。工作区根 `F:\C\git\.cursor\skills` 仍为 Cursor 物理主路径；本仓为 **云端备份与换机源**。
+本仓为 **七子仓之一**（Skills 云端镜像），与 [安防开发总仓](../README.md) 下其余子仓 **独立提交、独立推送**。工作区根 `F:\C\git\.cursor\skills` 仍为 Cursor 物理主路径；本仓为 **云端备份与换机源**。
 
 ## 注意
 
